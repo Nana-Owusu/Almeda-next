@@ -32,7 +32,7 @@ function SingleProduct() {
                 <img
                   className=" object-cover w-[700px] md:h-[400px] lg:h-[750px]"
                   src="./images/lauren-winter-wide-pant-natural_0178-v1-FINAL.jpg"
-                  alt="mainAttair"
+                  alt="mainAttaire"
                 />
               </div>
             </div>
