@@ -1,15 +1,11 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/footer";
 import Heronav from "@/components/heronav";
 import Product from "@/components/products-shop/product";
+import SingleProduct from "@/components/single-product/single-product";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <Heronav />
-      <Product />
-      <Footer />
+      <SingleProduct />
     </>
   );
 }

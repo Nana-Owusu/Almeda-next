@@ -14,7 +14,6 @@ function Lookbook() {
           />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

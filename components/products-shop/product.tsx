@@ -1,161 +1,26 @@
+import { MOCK_PRODUCTS } from "@/constants";
+
 function Product() {
   return (
     <>
       <div className="container mx-auto px-4 ">
-        <div className="card mt-14 py-8 border-t grid lg:grid-cols-4 md:grid-cols-3 gap-4">
+        <div className="card mt-14 py-8 border-t grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 align-middle">
           {/* note */}
-          <div className="card--list">
-            <div className="product--image--container ">
+          {MOCK_PRODUCTS.map((product) => (
+            <div key={product.title} className="card--list">
               <img
-                className="product--image"
-                src="./images/kimem-romy-trousers_0155-v1-FINAL-copy.jpg"
+                className="product--image h-60 md:h-80 object-cover"
+                src={product.image}
                 alt="product"
               />
+
+              <h2 className="product--title">{product.title}</h2>
+              <h3 className="product--price">${product.price}</h3>
+              {product.sale && (
+                <p className=" text-right text-[#B2BEB5] ">SALE</p>
+              )}
             </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-            <p className=" text-right text-[#B2BEB5] ">SALE</p> {/* sample */}
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
-
-          {/* note */}
-
-          <div className="card--list">
-            <div className="product--image--container">
-              <img
-                className="product--image"
-                src="./images/kimem-jacky-bicolor-waist-trousers-navy-black_0374-v1-FINAL-copy.jpg"
-                alt="product"
-              />
-            </div>
-            <h2 className="product--title">Hello World</h2>
-            <h3 className="product--price">$50.00</h3>
-          </div>
+          ))}
         </div>
       </div>
     </>
