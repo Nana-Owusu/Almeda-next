@@ -1,3 +1,5 @@
+import { SINGLE_PRODUCTS } from "@/constants/index-single-product";
+
 function SingleProduct() {
   return (
     <>
@@ -7,10 +9,10 @@ function SingleProduct() {
         </div>
 
         <div className=" my-10">
-          <div className="flex flex-col md:flex-row ">
-            <div className="flex md:space-x-3 ">
+          <div className="flex flex-col md:flex-row space-y-4 ">
+            <div className="flex md:space-x-3">
               <div className="flex flex-col space-y-3">
-                <div className="hidden md:block">
+                <div className="hidden md:block space-y-3">
                   <div>
                     <img
                       src="./images/kimem-lisa-oversized-shirt-navy_0363-v1-FINAL-copy.jpg"
@@ -38,7 +40,7 @@ function SingleProduct() {
             </div>
 
             <div>
-              <div className="space-y-4 py-10 md:pl-10 tracking-widest">
+              <div className="space-y-2 md:py-2 lg:py-5 md:pl-10 tracking-widest">
                 <h2 className="text-2xl">Lounge Tunic / Black</h2>
                 <p>$50.00</p>
                 <h3>DESCRIPTION</h3>
@@ -83,11 +85,34 @@ function SingleProduct() {
                     </div>
                   </div>
                 </div>
-                <button className=" bg-black text-white w-full h-9">
-                  Add to Cart
-                </button>
+                <div className="py-4">
+                  <button className="bg-black text-white w-full h-10">
+                    Add to Cart
+                  </button>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div>
+          <h2 className="text-2xl font-light">You Might Also like</h2>
+          <div className="card mt-14 py-8 border-t grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-4 align-middle overflow-hidden">
+            {/* note */}
+            {SINGLE_PRODUCTS.map((product) => (
+              <div key={product.title} className="card--list">
+                <img
+                  className="product--image h-60 md:h-80 object-cover"
+                  src={product.image}
+                  alt="product"
+                />
+
+                <h2 className="product--title">{product.title}</h2>
+                <h3 className="product--price">${product.price}</h3>
+                {product.sale && (
+                  <p className=" text-right text-[#B2BEB5] ">SALE</p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
