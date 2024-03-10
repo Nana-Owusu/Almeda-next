@@ -1,11 +1,14 @@
+import CategoriesNav from "@/components/CategoriesNav";
 import Heronav from "@/components/heronav";
-import Product from "@/components/products-shop/product";
-import SingleProduct from "@/components/single-product/single-product";
+import Products from "@/components/products-shop/products";
 
 export default function Home() {
   return (
     <>
-      <SingleProduct />
+      <div className="mt-28">
+        <CategoriesNav />
+      </div>
+      <Products />
     </>
   );
 }
