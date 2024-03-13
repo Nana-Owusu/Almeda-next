@@ -67,7 +67,7 @@ const Cart = () => {
                   <div className="text-2xl">$800.00</div>
                 </div>
                 <div>
-                  <Link href="/checkout">
+                  <Link href="/checkout" target="_blank">
                     <button className="border-2 bg-black text-white text-center w-full py-5">
                       Checkout
                     </button>
