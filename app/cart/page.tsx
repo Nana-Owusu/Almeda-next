@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Cart = () => {
@@ -66,9 +67,11 @@ const Cart = () => {
                   <div className="text-2xl">$800.00</div>
                 </div>
                 <div>
-                  <button className="border-2 bg-black text-white text-center w-full py-5">
-                    Checkout
-                  </button>
+                  <Link href="/checkout">
+                    <button className="border-2 bg-black text-white text-center w-full py-5">
+                      Checkout
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
